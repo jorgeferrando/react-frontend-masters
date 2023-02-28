@@ -17,13 +17,25 @@ Type formatter on settings and set 'Prettier' as default formatter
 `npm install -D eslint@8.24.0 eslint-config-prettier@8.5.0`
 
 ## Vite
+
 `npm install -D vite@3.1.4 @vitejs/plugin-react@2.1.0`
 
-## React 
+## React
+
 `npm install react@18.2.0 react-dom@18.2.0`
 
 ## Lint Plugins
+
 `npm i -D eslint-plugin-import@2.26.0 eslint-plugin-jsx-a11y@6.6.1 eslint-plugin-react@7.31.8`
 
 ## React Hooks Lint Plugins
+
 `npm i -D eslint-plugin-react-hooks@4.6.0`
+
+## Dev Tools
+
+Using Vite if you use `vite` command it will use `NODE_ENV=development`, if you use `vite build` it will use `NODE_ENV=production`. This will improve the size and the performance of React.
+
+## Strict Mode
+
+If you wrap your app in `<React.StrictMode></React.StrictMode>` it will give you additional warnings about things you shouldn't be doing.

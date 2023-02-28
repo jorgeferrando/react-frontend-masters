@@ -39,3 +39,7 @@ Using Vite if you use `vite` command it will use `NODE_ENV=development`, if you 
 ## Strict Mode
 
 If you wrap your app in `<React.StrictMode></React.StrictMode>` it will give you additional warnings about things you shouldn't be doing.
+
+## Routing
+
+Install: `npm i react-router-dom@6.4.1`

@@ -43,3 +43,10 @@ If you wrap your app in `<React.StrictMode></React.StrictMode>` it will give you
 ## Routing
 
 Install: `npm i react-router-dom@6.4.1`
+
+## React Query
+
+`npm i @tanstack/react-query@4.10.1`
+
+Most difficult part of react is handle `useEffect`. React Query will help you to remove effects.
+Optimize the number of effects of your app is the secret for create maintainable React Apps.

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 const Details = () => {
     const { id } = useParams();
@@ -32,4 +33,13 @@ const Details = () => {
     );
 };
 
-export default Details;
+function DetailsErrorBoundary(props) {
+    //it is the only case when you use the chain operator to pass props
+    return (
+        <ErrorBoundary>
+            <Details {...props} />
+        </ErrorBoundary>
+    );
+}
+
+export default DetailsErrorBoundary;

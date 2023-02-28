@@ -1,5 +1,6 @@
 import { Component } from "react";
 
+// CAN'T USE HOOKS, IF YOU WANT TO USE HOOKS NEED TO CREATE A FUNCTION COMPONENT AS BRIDGE
 class Carousel extends Component {
     state = {
         active: 0,
@@ -7,6 +8,12 @@ class Carousel extends Component {
 
     static defaultProps = {
         images: ["https://pets-images.dev-apis.com/pets/none.jpg"],
+    };
+
+    handleIndexClick = (e) => {
+        this.setState({
+            active: +e.target.dataset.index,
+        });
     };
 
     render() {
@@ -19,6 +26,8 @@ class Carousel extends Component {
                 <div className="carousel-smaller">
                     {images.map((photo, index) => (
                         <img
+                            onClick={this.handleIndexClick}
+                            data-index={index}
                             key={photo}
                             src={photo}
                             className="{index === active ? 'active' : ''}"
